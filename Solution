@@ -1,0 +1,23 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        String s = scan.nextLine();
+        s=s.trim();
+        
+        if(s.length()>400000 ){System.out.println(0);return;}
+        else if(s.length()<1){System.out.println(0);return;}
+        else{
+        String tokenArray[]=s.trim().split("[!,?._'\\@ ]+");
+        int count=tokenArray.length;
+        System.out.println(count);
+        for(String token : tokenArray){
+            System.out.println(token);
+        }
+        }
+        scan.close();
+    }
+}
